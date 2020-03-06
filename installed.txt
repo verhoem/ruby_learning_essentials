@@ -1,0 +1,15 @@
+gem install asciidoctor-pdf --pre # generate pdf from e.g. html
+gem install rouge # highlighted source listings
+gem install pygments.rb
+gem install coderay
+#after down load of README.adoc fro  https://github.com/rubocop-hq/ruby-style-guide
+asciidoctor-pdf -a allow-uri-read ruby-style-guide-master_README.adoc
+gem install rubocop
+cd ~/project_dir
+#> rubocop
+Got offence "missing frozen string literal comment" MV
+created .rubocop.yml and inserted
+-- 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+--
